@@ -83,3 +83,33 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+//time counter section 
+function startCountdown(duration) {
+    let timer = duration;
+    setInterval(() => {
+        let days = Math.floor(timer / (24 * 60 * 60));
+        let hours = Math.floor((timer % (24 * 60 * 60)) / (60 * 60));
+        let minutes = Math.floor((timer % (60 * 60)) / 60);
+        let seconds = timer % 60;
+        
+        document.getElementById("days").textContent = String(days).padStart(2, '0');
+        document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+        document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+        document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+        
+        if (timer > 0) {
+            timer--;
+        }
+    }, 1000);
+}
+
+startCountdown(5 * 24 * 60 * 60 + 12 * 60 * 60 + 30 * 60 + 45); // Initial countdown value
+
+
+// footer email subscribe 
+document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
+    e.preventDefault();
+    document.querySelector('.subscription').classList.add('done');
+  });
