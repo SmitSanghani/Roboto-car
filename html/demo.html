@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagination UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f8f8;
+        }
+
+        
+        /* Responsive Design */
+        @media (max-width: 500px) {
+            .pagination {
+                gap: 5px;
+            }
+
+            .page-item {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="pagination">
+        <div class="page-item" onclick="goToPage(1)"><i class="fa-solid fa-angles-left"></i></div>
+        <div class="page-item" onclick="prevPage()"><i class="fa-solid fa-angle-left"></i></div>
+        <div class="page-item active" onclick="goToPage(1)">1</div>
+        <div class="page-item" onclick="goToPage(2)">2</div>
+        <div class="page-item" onclick="goToPage(3)">3</div>
+        <div class="page-item dots">...</div>
+        <div class="page-item" onclick="goToPage(10)">10</div>
+        <div class="page-item" onclick="nextPage()"><i class="fa-solid fa-angle-right"></i></div>
+        <div class="page-item" onclick="goToPage(10)"><i class="fa-solid fa-angles-right"></i></div>
+    </div>
+
+    <script>
+        let currentPage = 1;
+        let totalPages = 10;
+
+        function goToPage(page) {
+            if (page < 1 || page > totalPages) return;
+            currentPage = page;
+            updatePagination();
+        }
+
+        function prevPage() {
+            if (currentPage > 1) {
+                currentPage--;
+                updatePagination();
+            }
+        }
+
+        function nextPage() {
+            if (currentPage < totalPages) {
+                currentPage++;
+                updatePagination();
+            }
+        }
+
+        function updatePagination() {
+            let pages = document.querySelectorAll(".page-item");
+            
+            pages.forEach(page => {
+                if (!page.classList.contains("dots")) {
+                    page.classList.remove("active");
+                }
+                
+                if (parseInt(page.innerText) === currentPage) {
+                    page.classList.add("active");
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

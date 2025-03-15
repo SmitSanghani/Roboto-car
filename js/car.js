@@ -1,6 +1,6 @@
 //dropdown topbar
 document.addEventListener("DOMContentLoaded", () => {
-  const dropdowns = document.querySelectorAll(".dropdown");
+  const dropdowns = document.querySelectorAll(".custom-dropdown");
   document.addEventListener("click", (event) => {
       let clickedDropdown = null;
       dropdowns.forEach((dropdown) => {
@@ -113,3 +113,107 @@ document.querySelector('.submit-email').addEventListener('mousedown', (e) => {
     e.preventDefault();
     document.querySelector('.subscription').classList.add('done');
   });
+
+//   collection dropdown
+$(document).ready(function() {
+    $("#collection-btn").click(function(e) {
+        e.preventDefault();
+        $("#collection-dropdown").slideToggle();
+    });
+
+    // Close dropdown when clicking outside
+    $(document).click(function(event) {
+        if (!$(event.target).closest("#collection-btn, #collection-dropdown").length) {
+            $("#collection-dropdown").slideUp();
+        }
+    });
+});
+
+//   new arrival dropdown
+$(document).ready(function() {
+    $("#new-arrival-btn").click(function(e) {
+        e.preventDefault();
+        $("#new-arrival-dropdown").slideToggle();
+    });
+
+    // Close dropdown when clicking outside
+    $(document).click(function(event) {
+        if (!$(event.target).closest("#new-arrival-btn, #new-arrival-dropdown").length) {
+            $("#new-arrival-dropdown").slideUp();
+        }
+    });
+});
+
+// profile dropdown
+$(document).ready(function() {
+    $("#profile-btn").click(function(e) {
+        e.preventDefault();
+        $("#profile-dropdown").slideToggle();
+    });
+
+    // Click outside to close
+    $(document).click(function(event) {
+        if (!$(event.target).closest("#profile-btn, #profile-dropdown").length) {
+            $("#profile-dropdown").slideUp();
+        }
+    });
+});
+
+// nav-item active class
+document.addEventListener('DOMContentLoaded', function() {
+    const navItems = document.querySelectorAll('.nav-link');
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navItems.forEach(nav => nav.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+// category dropdown sider bar
+
+$(document).ready(function() {
+    $(".toggle-category").click(function() {
+        $(this).next(".subcategory-list").slideToggle();
+        $(this).find(".arrow").toggleClass("rotated");
+    });
+});
+
+// pagination
+let currentPage = 1;
+let totalPages = 10;
+
+function goToPage(page) {
+    if (page < 1 || page > totalPages) return;
+    currentPage = page;
+    updatePagination();
+}
+
+function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        updatePagination();
+    }
+}
+
+function nextPage() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        updatePagination();
+    }
+}
+
+function updatePagination() {
+    let pages = document.querySelectorAll(".page-item");
+    
+    pages.forEach(page => {
+        if (!page.classList.contains("dots")) {
+            page.classList.remove("active");
+        }
+        
+        if (parseInt(page.innerText) === currentPage) {
+            page.classList.add("active");
+        }
+    });
+}

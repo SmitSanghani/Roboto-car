@@ -29,6 +29,10 @@ body{
     font-family: 'Poppins-SemiBold';
     src: url('/font/Poppins/Poppins-SemiBold.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Poppins-Medium';
+    src: url('/font/Poppins/Poppins-Medium.ttf') format('truetype');
+}
  
 /* css color */
 :root{
@@ -46,6 +50,7 @@ body{
     --text-color: #444444;
     --border-clr:rgba(201, 201, 201, 1);
     --clr-greay:#B3B3B3;
+    --light-greay:#dfdfdf;
 }
 .white{color:var(--white);}
 .red{color: var(--red);} 
@@ -88,7 +93,7 @@ button {
 
 .li-none{list-style: none;}
 
-.dropdown {
+.custom-dropdown {
     display: inline-block;
     position: relative;
 }
@@ -144,7 +149,7 @@ button {
 }
 
 /* === Dropdown open state === */
-.dropdown.open .custom-dropdown-menu {
+.custom-dropdown.open .custom-dropdown-menu {
     transform: translateY(0);
     visibility: visible;
     opacity: 1;
@@ -166,7 +171,7 @@ button {
 .custom-dropdown-menu a:hover {background-color: var(--dropdown-link-hover-bg);}
 .title{font-family: 'Poppins-SemiBold';}
 /* === Animation for dropdown links === */
-.dropdown.open .custom-dropdown-menu li {
+.custom-dropdown.open .custom-dropdown-menu li {
     -webkit-transform: translateY(10px);
     -webkit-animation: fadeIn 0.3s ease forwards;
     transform: translateY(10px);
@@ -209,7 +214,14 @@ font-family: "Poppins-light" !important;
     margin: 0px !important;
 }
 .search-box{width: 70% !important;}
-.profile-logo{width: 65%;}
+.profile-logo .user-icon i{
+    padding: 18px 18px;
+    border: 2px solid var(--greay);
+    border-radius: 10px;
+    background-color: var(--red);
+    color: var(--white);
+
+}
 .my-cart-btn{
     position: relative;
     padding: 5px 15px !important;
@@ -258,23 +270,25 @@ font-family: "Poppins-light" !important;
 .nav-item .nav-link {
     font-weight: bold !important;
     color: #000 !important;
-    margin-top: 3px;
+    padding: 12px 15px !important;
 }
 .navbar-nav {
     width: 100%;
     display: flex;
     justify-content: space-evenly; /* Space between links */
 }
-.nav-item .nav-link:hover{
-    color: var(--red) !important;
+.nav-link.active{
+    color: var(--white) !important;
     transition: 0.5s;
+    background-color: var(--red);
+    border-radius: 10px 10px 0px 0px;
 }
 
 /* all category box */
 .category-toggle-btn{
     font-family: "Poppins-bold" !important;
     width: 100%;
-    padding: 10px 18px;
+    padding: 12px 18px;
     color: black;
     font-weight: bold;
     border-radius: 10px 10px 0px 0px;
@@ -349,6 +363,24 @@ font-family: "Poppins-light" !important;
 }
 .inner-text{line-height: 65px;}
 .inner-text p{font-family: 'Poppins-ExtraBold';}
+
+.Asspiring-seller-card{
+    border: 1px solid var(--greay);
+    padding: 20px !important;    
+    border-radius: 10px; 
+}
+
+.Asspiring-seller-card .best-seller-img{
+    background-color: var(--white);
+    border-radius:20px;
+    padding: 20px !important;
+}
+.cart-btn{
+    width: 50%  !important;
+    padding: 10px 0px;
+    margin-top: 40px;
+}
+
 .best-seller-img{
     padding: 60px 52px 26px 52px;
     background-color: var(--greay);
@@ -489,7 +521,7 @@ font-family: "Poppins-light" !important;
     width: 100%;
     height: 100%;
     text-align: center;
-    line-height: 48px;
+    line-height: 53px;
     transition: visibility .35s ease-in-out,
       opacity .35s ease-in-out;
   }
@@ -546,4 +578,294 @@ font-family: "Poppins-light" !important;
 }
 .border-top{border-top: 1px solid var(--clr-greay);}
 
+/* collection dropdown  */
+.collection{
+    position: relative;
+}
+.collection .dropdown {
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    width: 40%;
+    background-color: var(--white);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+.collection .dropdown-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: auto;
+}
+.category-img{height: 130px;}
+.category h3 {
+    font-family: 'Poppins-SemiBold' !important;
+    font-size: 20px;
+    margin: 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--greay);
+}
+.category ul {
+    list-style: none;
+    padding: 0;
+}
+.category li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--black);
+    line-height: 35px;
+    transition: 0.5s;
+}
+.category li a:hover{
+    color: var(--red);
+}
+
+/* new arrival */
+.new-arrival{
+    position: relative; 
+}
+.new-arrival .dropdown {
+    position: absolute;
+    top: 20px;
+    left: 45%;
+    width: 25%;
+    background-color: var(--white);
+    display: none;
+    padding: 20px;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.3) 0px 8px 24px;
+}
+.new-arrival .dropdown-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 5    00px;
+    margin: auto;
+}
+.new-arrival .arrival-title{
+    font-family: 'Poppins-SemiBold' !important;
+    font-size: 20px;
+    margin: 10px 0;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--greay);
+}
+.new-arrival ul {
+    list-style: none;
+    padding: 0;
+}
+.new-arrival li a{
+    font-size: 14px;
+    text-decoration: none;
+    color: var(--black);
+    line-height: 35px;
+    transition: 0.5s;
+}
+.new-arrival li a:hover{
+    color: var(--red);
+}
+
+/* user profile */
+
+.profile-menu {
+    position: absolute;
+    top: 120px;
+    left:63%;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    display: none;
+    padding: 20px;
+    border: 1px solid var(--border-clr);
+    z-index: 10;
+}
+.profile-menu li{list-style: none;}
+.profile-menu ul{padding: 0px;}
+.profile-menu i{padding-right: 15px;font-size: 21px;}
+.profile-menu li a{
+    text-decoration: none;
+    color: var(--black);
+    line-height: 45px;
+    font-weight: 700;
+}
+.profile-menu h3{
+    color: var(--black);
+}
+.user-name{
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--black);
+}
+
+/* Aspiting page css */
+ .page-section a{
+    text-decoration: none;
+    color: var(--black);
+}
+ .page-section .red{
+    color: var(--red);
+}
+
+.Aspiring-shop-by  h3{
+    padding: 10px;
+    border: 1px solid var(--btn-color);
+    background-color: var(--light-greay);
+    border-radius: 9px 9px 0px 0px
+}
+.search-part,.manufacturer-part ,.Categories{
+    padding: 20px 15px 15px 15px;
+    border: 1px solid var(--light-greay);
+    border-top: 0px;
+}
+.Categories{ border-radius: 0px 0px 10px 10px;}    
+.searchboxwrapper {position: relative;}
+    
+.searchbox {
+    border: 1px solid #dadada;
+    outline: none;
+    color: #777;
+    width: 100%;
+    background: #fff;
+    padding: 7px;
+    border-radius: 15px;
+}   
+    
+.searchsubmit {
+    font-family: 'FontAwesome';
+    width: 29px;
+    height: 29px;
+    background-color: var(--white);
+    border: 1px solid #dadada;
+    font-size: 16px;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    border: none;
+    color: #5d3250;
+    border-radius: 20px;
+}   
+    
+.car-unit{
+    height: 35px;
+    width: 40px;
+    text-align: center;
+    line-height: 37px;
+    background-color: var(--greay);
+    border-radius: 5px;
+}
+
+.category-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.subcategory-list {
+    display: none;
+    padding-left: 20px;
+}
+.subcategory-list i{
+    margin-right: 0px;
+}
+.subcategory {
+    padding: 5px 0;
+    font-size: 14px;
+    color: #333;
+    display: flex;
+    align-items: center;
+}
+
+ .subcategory .arrow {
+    color: var(--black) !important;
+    margin-right: 5px;
+    visibility: hidden; /* Initially hidden */
+} 
+
+.subcategory:hover {
+    color: var(--red);
+    transition: 0.5s;
+}
+
+.subcategory:hover .arrow {
+    transition: 0.5s;
+    visibility: visible; /* Show on hover */
+    color: var(--red);
+}
+
+.toggle-category {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.price-btn button{
+    padding: 10px 30px;
+    border: 1px solid var(--clr-greay);
+    background-color: transparent;
+    border-radius: 10px;margin-right: 12px;
+}
+.price-btn button:nth-child(3){padding: 10px 20px;}
+.reset-btn{
+     padding: 10px;
+     width: 100%;
+     background-color: var(--red); 
+     border-radius: 10px;      
+}
+.grid-view-btn a{
+    text-decoration: none;
+    padding: 8px 15px;
+    border: 1px solid var(--greay);
+    border-radius: 10px;
+    color: var(--black);
+    margin-right: 10px;
+}
+.grid-view-btn a:hover{
+    background-color: var(--red);
+    color: var(--white);
+}
+.short-by-dropdown {   
+    border: 1px solid var(--greay);
+    border-radius: 10px;
+}
+
+/* pagination */
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.page-item {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.grid-view-btn .active ,.pagination .active{
+    background-color: red;
+    color: white;
+    border-color: red;
+}
+
+.dots {
+    border: none;
+    cursor: default;
+}
+
 /*  */
+.Asspiring-seller-card{
+    display: flex;
+}
