@@ -1,27 +1,82 @@
 [
-    {
+  {
       "id": "product-1",
       "name": "ANDOUILLE TURKEY",
       "sold_by": "Some Seller 1",
       "old_price": "$95.00",
       "stock": "2 in Stock",
-      "image": "/img/product-3.png"
-    },
-    {
+      "image": "/img/product-3.png",
+      "part_number": "abcd",
+      "weight": "4 kg",
+      "dimensions": "70 x 30 x 30 cm",
+      "car_make": "Datsun",
+      "car_model": "GO, GO+",
+      "car_sub_model": "All Models",
+      "parts_brand": "Datsun Genuine Part",
+      "net_quantity": "1 Pc.",
+      "parts_category": "Head Lamp, Head Light, Headlamp Assembly, Headlight Assembly",
+      "compatibility": [
+          "Datsun Go 1st Gen & Facelift Model | 1.2L Petrol | 03.2014 – 04.2020",
+          "Datsun Go+ 1st Gen & Facelift Model | 1.2L Petrol | 01.2015 – 04.2020"
+      ],
+      "description": "Head Light Assy (LH) OE (Original Equipment) Part No. 260604LA0A is a Datsun Genuine Part for Go, Go+. This Product comes in Genuine Datsun Packing and sold as a single piece in a box.",
+      "manufacturer": {
+          "name": "Nissan Motors India Private Ltd",
+          "address": "Plot No. 1A, Sipcot Industrial Park, London"
+      }
+  },
+  {
       "id": "product-2",
       "name": "Product Name 2",
       "sold_by": "Some Seller 2",
       "old_price": "$75.00",
       "stock": "5 in Stock",
-      "image": "/img/best-seller-img-2.png"
-    },
-    {
+      "image": "/img/best-seller-img-2.png",
+      "part_number": "efgh",
+      "weight": "4 kg",
+      "dimensions": "50 x 20 x 20 cm",
+      "car_make": "Toyota",
+      "car_model": "Corolla, Camry",
+      "car_sub_model": "All Models",
+      "parts_brand": "Toyota Genuine Part",
+      "net_quantity": "1 Pc.",
+      "parts_category": "Brake Pad, Brake Disc",
+      "compatibility": [
+          "Toyota Corolla 2nd Gen | 1.8L Petrol | 2010 – 2020",
+          "Toyota Camry 3rd Gen | 2.5L Petrol | 2015 – 2023"
+      ],
+      "description": "High-performance brake pad set for Toyota Corolla and Camry. Ensures smooth braking and increased durability.",
+      "manufacturer": {
+          "name": "Toyota Motor Corporation",
+          "address": "Toyota City, Japan"
+      }
+  },
+  {
       "id": "product-3",
       "name": "Product Name 3",
       "sold_by": "Some Seller 3",
       "old_price": "$85.00",
       "stock": "8 in Stock",
-      "image": "/img/best-seller-img-3.png"
-    }
-  ]
+      "image": "/img/best-seller-img-3.png",
+      "part_number": "ijkln",
+      "weight": "4 kg",
+      "dimensions": "60 x 25 x 25 cm",
+      "car_make": "Honda",
+      "car_model": "Civic, Accord",
+      "car_sub_model": "All Models",
+      "parts_brand": "Honda Genuine Part",
+      "net_quantity": "1 Pc.",
+      "parts_category": "Air Filter, Engine Filter",
+      "compatibility": [
+          "Honda Civic 3rd Gen | 1.6L Petrol | 2012 – 2021",
+          "Honda Accord 4th Gen | 2.4L Petrol | 2016 – 2024"
+      ],
+      "description": "Premium quality air filter for Honda Civic and Accord. Provides improved engine efficiency and longevity.",
+      "manufacturer": {
+          "name": "Honda Motor Co., Ltd.",
+          "address": "Tokyo, Japan"
+      }
+  }
+]
+
   

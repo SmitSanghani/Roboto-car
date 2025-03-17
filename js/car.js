@@ -219,10 +219,10 @@ function updatePagination() {
 }
 
 function redirectToProduct(productId) {
-    console.log("Redirecting to product:", productId); // Debugging
     localStorage.setItem("selectedProduct", productId);
-    window.location.href = "product-detail.html";
+    window.location.href = "/html/product-detail.html"; // Ensure this is the correct product page
 }
+
 
 
 // description tab
