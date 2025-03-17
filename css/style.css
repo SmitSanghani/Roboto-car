@@ -57,18 +57,24 @@ body{
 .black{color: var(--black);}
 .bg-greay{background-color: var(--greay);}
 .greay{color:var(--clr-greay);}
+
 /* fonts */
 .ffp-light{font-family: 'Poppins-light' !important;}
 .ffp-ExtraBold{font-family: 'Poppins-ExtraBold' !important;}
 .ffp-Bold{font-family: 'Poppins-Bold' !important;}
 .ffp-SemiBold{font-family: 'Poppins-SemiBold' !important;}
+.ffp-Medium{font-family: 'Poppins-Medium' !important;}
+
 /* font css */
 .fs-14{font-size: 14px;}
+.fs-18{font-size: 18px;}
 .fs-20{font-size: 20px;}
 .fs-23{font-size: 23px;}
 .fs-25{font-size: 25px;}
+.fs-28{font-size: 28px;}
 .fs-31{font-size: 31px;}
 .fs-34{font-size: 34px;}
+.fs-35{font-size: 35px;}
 .fs-37{font-size: 37px;}
 .fs-20{font-size: 20px;}
 .fs-29{font-size: 29px;}
@@ -81,6 +87,9 @@ body{
 .py-100{padding: 100px 0px;}
 .pt70{padding: 70px 0px 0px 0px;}
 .mt-42{margin-top: 42px !important;}
+.mt-100{
+    margin-top: 100px;
+}
 .br-20{border-radius: 20px;}
 
 /* drop down css *//* === Utility styles === */
@@ -422,6 +431,8 @@ font-family: "Poppins-light" !important;
     font-size: 20px;
     color: #666;
 }
+
+
 .cart-btn{
     width: 100%;
     padding: 10px 0px;
@@ -868,4 +879,145 @@ font-family: "Poppins-light" !important;
 /*  */
 .Asspiring-seller-card{
     display: flex;
+}
+
+/* product-detail css */
+.img-display{
+    overflow: hidden;
+    width: 100%;
+    border: 1px solid var(--greay);
+    border-radius: 15px;
+}
+.img-showcase{
+    height: 500px;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+.img-showcase img{
+    min-width:100%;
+    padding: 30px;
+}
+.img-select{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.img-item:hover{opacity: 0.8;}
+.img-select img{
+    width: 80%;
+    padding: 16px 10px;
+    border: 1px solid var(--greay);
+    border-radius: 15px;
+}
+
+.increase-decrease i{
+    padding: 8px;
+    border: 1px solid var(--greay);
+    border-radius: 5px;
+}
+.increase-decrease input{
+    border: none;
+    width: 15px;
+    text-align: center;
+    cursor: pointer;
+}
+.qty-container{
+    border-top: 1px solid var(--greay);
+    padding-top: 15px;
+}
+
+.buy-btn{
+    padding: 8px 0px !important;
+    width: 40% !important;
+    color: var(--red);
+    background-color: transparent;
+    border: 1px solid var(--red);
+}
+.add-to-cart-btn {
+    background-color: var(--red);
+}
+.add-to-cart-btn ,.buy-btn{
+    margin-top: 35px;
+    width: 40%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    color: #FFFFFF;
+}
+.buy-btn{background-color:transparent;margin-left: 30px;
+color: var(--red);}
+
+/* description tab */
+
+
+.tabs li {
+    position: relative;
+    list-style: none;
+    float: left;
+    width: 15%;
+    color: var();
+}
+.tabs{
+    display: flex;
+    background-color:var(--greay);
+    justify-content: start;
+    padding-left: 113px !important;
+}
+.tabs a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color:var(--black);
+    padding: 20px 0;
+}
+.tabs a:hover,
+.tabs a.active {
+    background: var(--red);
+    color: var(--white);
+}
+.tabgroup div {
+    justify-content: center;
+    padding: 20px;
+    padding-left: 100px;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tabs a:hover::after ,.tabs a.active::after{
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: var(--red);
+    left: 50%;
+    bottom: 0%;
+    transform: translate(-50%,60%);
+    rotate: 45deg;
+}
+
+/* SPECIFICATION css */
+.specification, .description {
+    flex: 1;
+    padding: 10px;
+}
+.specification h2, .description h2 {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+.specification table {
+    width: 100%;
+    border: none  !important;
+}
+.specification table td {
+    padding: 8px;
+    border: none !important;
+}
+.specification table td:first-child {
+    font-weight: bold;
+    width: 30%; /* Adjust as needed */
 }
