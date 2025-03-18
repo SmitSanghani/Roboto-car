@@ -98,3 +98,56 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// chnage price for product qty add to cart page
+document.addEventListener('DOMContentLoaded', function () {
+    const quantityInputs = document.querySelectorAll('.quantity-input');
+    const plusButtons = document.querySelectorAll('.quantity-btn.plus');
+    const minusButtons = document.querySelectorAll('.quantity-btn.minus');
+    const emptyCartButton = document.querySelector('.empty-cart');
+    const steps = document.querySelectorAll('.step');
+
+    // Initial calculation
+    updateTotal();
+
+    plusButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        quantityInputs[index].value = parseInt(quantityInputs[index].value) + 1;
+        updateTotal();
+      });
+    });
+
+    minusButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        if (parseInt(quantityInputs[index].value) > 1) {
+          quantityInputs[index].value = parseInt(quantityInputs[index].value) - 1;
+          updateTotal();
+        }
+      });
+    });
+
+    quantityInputs.forEach(input => {
+      input.addEventListener('change', updateTotal);
+    });
+
+    emptyCartButton.addEventListener('click', () => {
+      quantityInputs.forEach(input => input.value = 1); // Reset to 1 (or 0 if you want to remove items)
+      updateTotal();
+    });
+
+    function updateTotal() {
+      let subtotal = 0;
+      let totalSaving = 0;
+      const discountedPrice = 55; // Assuming fixed discounted price
+      const originalPrice = 95;   // Assuming fixed original price
+
+      quantityInputs.forEach(input => {
+        const quantity = parseInt(input.value);
+        subtotal += quantity * discountedPrice;
+        totalSaving += quantity * (originalPrice - discountedPrice);
+      });
+
+      document.querySelector('.summary-row:nth-child(1) span:nth-child(2)').textContent = `$${subtotal.toFixed(2)}`;
+      document.querySelector('.summary-row:nth-child(2) span:nth-child(2)').textContent = `$${totalSaving.toFixed(2)}`;
+      document.querySelector('.summary-row.total span:nth-child(2)').textContent = `$${subtotal.toFixed(2)}`;
+    }
+  });

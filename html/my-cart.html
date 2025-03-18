@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product-detail page</title>
+    <title>my-cart page</title>
     <link rel="stylesheet" href="../css/all.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -214,226 +214,125 @@
         </div>
     </div>
 
-    <!-- add to cart section start -->
-    <div class="container-fluid py-100 pt-0">
-        <div class="container">
-            <div class="row">
-                <div class="page-section mt-5">
-                    <i class="fa-solid fa-house"></i> &nbsp;<i class="fa-solid fa-chevron-right"></i> &nbsp;
-                    <a href="">Lighting</a> &nbsp;<i class="fa-solid fa-chevron-right"></i> &nbsp;<a
-                        href="/html/Asipring-grid-bar.html">Aspiring</a> &nbsp;<i class="fa-solid fa-chevron-right"></i>
-                    &nbsp;<a href="" class="red">Andouille Turkey</a>
-                </div>
-            </div>
-            <div class="row mt-5">
-                <div class="col-7 d-flex">
-                    <div class="col-2">
-                        <div class="img-select">
-                            <div class="img-item">
-                                <a href="#" data-id="1">
-                                    <img src="/img/product-2.png" alt="shoe image">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="2">
-                                    <img src="/img/product-3.png" alt="shoe image">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="3">
-                                    <img src="/img/product-2.png" alt="shoe image">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="4">
-                                    <img src="/img/product-3.png" alt="shoe image">
-                                </a>
-                            </div>
-                            <div class="img-item">
-                                <a href="#" data-id="5">
-                                    <img src="/img/product-2.png" alt="shoe image">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-10">
-                        <div class="img-display">
-                            <div class="img-showcase">
-                                <img src="/img/product-2.png" alt="shoe image">
-                                <img src="/img/product-3.png" alt="shoe image">
-                                <img src="/img/product-2.png" alt="shoe image">
-                                <img src="/img/product-3.png" alt="shoe image">
-                                <img src="/img/product-2.png" alt="shoe image">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-5">
-                    <div class="product-info">
-                        <div class="name-share-btn d-flex align-items-center justify-content-between">
-                            <h2 class="fs-35 mb-0" id="products-name">ANDOUILLE TURKEY</h2>
-                            <h2 class="fs-20 mb-0"><i class="fa-solid fa-share"></i>&nbsp;share</h2>
-                        </div>
-                        <p class="fs-6 fw-bold mt-3">Sold by: <span class="greay" id="sold-by">Bangalore/AVI</span></p>
-                        <p class=" fs-44 ffp-Medium red">$55.00 <span class="old-price fs-28 greay"
-                                id="old-price">$95.00</span></p>
-                        <p class="fs-6 ffp-Bold black pb-3" id="stock">2 in Stock</p>
-                        <div class="qty-container d-flex align-items-center">
-                            <h2 class="fs-23 mb-0">Qty</h2>&nbsp;
-                            <div class="increase-decrease">
-                                <i class="fa-solid fa-minus" id="decrease"></i>
-                                <input type="text" value="1" id="qty" readonly>
-                                <i class="fa-solid fa-plus" id="increase"></i>
-                            </div>
-                        </div>
-                        <div class="Compare-Question mt-5 d-flex  align-items-center">
-                            <div class="Compare d-flex align-items-center">
-                                <i class="fa-solid fa-code-compare red fs-25"></i>&nbsp;
-                                <h2 class="fs-18 mb-0">Add to Compare</h2>
-                            </div>
-                            <div class="Question d-flex ms-5">
-                                <i class="fa-solid fa-question red fs-25"></i>&nbsp;
-                                <h2 class="fs-18 mb-0">Add to Compare</h2>
-                            </div>
-                        </div>
-                        <div class="d-flex ">
-                            <button class="fs-20 ffp-Bold add-to-cart-btn">ADD TO CART</button>
-                            <button class="fs-20 ffp-Bold buy-btn ">BUY NOW</button>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- add to cart section end -->
-
-    <!-- Description section start -->
-    <div class="container-fluid  py-0">
+    <!-- cart step start -->
+    <div class="container-fluid mt-5">
         <div class="container">
             <div class="row ">
-                <ul class="tabs clearfix " data-tabgroup="first-tab-group">
-                    <li><a href="#tab1" class="active ffp-SemiBold">SPECIFICATION</a></li>
-                    <li class="ms-5"><a href="#tab2" class="ffp-SemiBold">Description</a></li>
-                </ul>
-                <section id="first-tab-group" class="tabgroup">
-                    <div id="tab1">
-                        <p class="fs-20 greay ms-2">Suitable Car Model :</p>
-                        <div class="specification p-0">
-                            <table>
-                                <tr>
-                                    <td>Part Number</td>
-                                    <td id="part-number">Lh2ljkm</td>
-                                </tr>
-                                <tr>
-                                    <td>Weight</td>
-                                    <td id="weight">4 kg</td>
-                                </tr>
-                                <tr>
-                                    <td>Dimensions (L*B*H)</td>
-                                    <td id="dimensions">70 x 30 x 30 cm</td>
-                                </tr>
-                                <tr>
-                                    <td>Car Make</td>
-                                    <td id="car-make">Datsun</td>
-                                </tr>
-                                <tr>
-                                    <td>Car Model</td>
-                                    <td id="car-model">GO, GO+</td>
-                                </tr>
-                                <tr>
-                                    <td>Car Sub Model</td>
-                                    <td id="car-sub-model">All Models.</td>
-                                </tr>
-                                <tr>
-                                    <td>Parts Brand</td>
-                                    <td id="parts-brand">Datsun Genuine Part</td>
-                                </tr>
-                                <tr>
-                                    <td>Net Quantity</td>
-                                    <td id="net-quantity">1 Pc.</td>
-                                </tr>
-                                <tr>
-                                    <td>Parts Category</td>
-                                    <td id="parts-category">Head Lamp, Head Light, Headlamp Assembly, Headlight Assembly
-                                    </td>
-                                </tr>
-                            </table>
-                            <div class="compatibility p-0 ms-2 mt-2">
-                                <p class="fs-20 greay">Suitable Car Model :</p>
-                                <ul>
-                                    <li>Datsun Go 1st Gen & Facelift Model | 1.2L Petrol | 03.2014 – 04.2020</li>
-                                    <li>Datsun Go+ 1st Gen & Facelift Model | 1.2L Petrol | 01.2015 – 04.2020</li>
-                                </ul>
+                <div class="steps-cart text-center">
+                    <div class="outer-box">
+                        <div class="cart-steps">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <h2>cart</h2>
+                    </div>
+                    <div class="outer-box">
+                        <div class="cart-steps">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h2>Authorise</h2>
+                    </div>
+                    <div class="outer-box">
+                        <div class="cart-steps">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <h2>Address</h2>
+                    </div>
+                    <div class="outer-box">
+                        <div class="cart-steps">
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <h2>Review</h2>
+                    </div>
+                    <div class="outer-box">
+                        <div class="cart-steps">
+                            <i class="fa-regular fa-credit-card"></i>
+                        </div>
+                        <h2>Pay</h2>
+                    </div>   
+                </div>
+            </div>
+            <div class="row">
+                <div class="tresh-btn d-flex justify-content-between">
+                    <h2 class="fs-30 fw-bold mb-0">MY CART</h2>
+                    <button class="empty-cart d-flex">
+                        <h2 class="fs-20 greay ffp-SemiBold">EMPTY CART</h2>&nbsp;<i
+                            class="fa-regular fa-trash-can red fs-23"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-8">
+                    <div class="Asspiring-seller-card mx-1">
+                        <div class="col-3 p-0">
+                            <div class="card ">
+                                <img src="/img/category-img-2.png" alt="VOLUP TATEM ACCU" class="best-seller-img"
+                                    width="100%">
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <div class="card-body ms-2">
+                                <div class="cart-name d-flex justify-content-between ">
+                                    <div class="product-name">
+                                        <h2 class="card-text fs-20 ffp-Bold">ANDOUILLE TURKEY</h2>
+                                        <h2 class="fw-normal fs-14 greay">Lh21jkm </h2>
+                                    </div>
+                                    <div class="product-stock">
+                                        <h2 class="fs-6"><strong>2</strong> in Stock</h2>
+                                    </div>
+                                </div>
+                                <div class="brand-price d-flex justify-content-between">
+                                    <div class="brand">
+                                        <h2 class="fs-14 ffp-SemiBold mb-0">BRAND</h2>
+                                        <h2 class="fs-6 greay">Datsun Genuine Part</h2>
+                                    </div>
+                                    <div class="product-price">
+                                        <p class=" fs-20 ffp-Medium red">$55.00 <span class="old-price fs-18 greay"
+                                                id="old-price">$95.00</span></p>
+                                    </div>
+                                </div>
+                                <div class="location d-flex justify-content-between">
+                                    <div class="city">
+                                        <h2 class="fs-14 ffp-SemiBold mb-0">SOLD BY</h2>
+                                        <h2 class="fs-6 greay">LONDON</h2>
+                                    </div>
+                                    <div class="qty-container d-flex align-items-center border-0 pt-0">
+                                        <h2 class="fs-23 mb-0 mt-0 ">Qty</h2>&nbsp;&nbsp;
+                                        <div class="item-quantity">
+                                            <button class="quantity-btn minus">-</button>
+                                            <input type="number" value="1" min="1" class="quantity-input">
+                                            <button class="quantity-btn plus">+</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="tab2">
-                        <p class="fs-6">Head Light Assy (LH) OE (Original Equipment) Part No. 260604LA0A is a Datsun
-                            Genuine Part for Go, Go+. This Product comes in Genuine Datsun Packing and sold as
-                            single piece in a box.</p>
-                        <ul>
-                            <li>Manufacturer Name: Nissan Motors India Private Ltd</li>
-                            <li>Manufacturer Address: Plot No. 1A, Sipcot Industrial Park, london</li>
-                        </ul>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
-    <!-- Description section end -->
-    <!-- best seller section start -->
-    <div class="container-fluid py-100">
-        <div class="container">
-            <div class="row">
-                <div class="text-center fs-44 black title">BEST SELLER</div>
-            </div>
-            <div class="row mt-0 seller-card row-cols-1 row-cols-md-3 row-cols-lg-4 gy-4">
-                <div class="col">
-                    <div class="card">
-                        <img src="/img/best-seller-img-1.png" alt="VOLUP TATEM ACCU" class="best-seller-img">
-                        <div class="card-body">
-                            <h2 class="card-text  fs-6">VOLUP TATEM ACCU</h2>
-                            <h2 class="fw-normal fs-6">Engine Accupressure</h2>
-                            <h2 class="card-text fw-bold fs-6 m-0">$60.00</h2>
-                        </div>
-                    </div>
+                    <button class="fs-20 ffp-Bold add-to-cart-btn">Continue Shopping</button>
                 </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/img/best-seller-img-2.png" alt="VOLUP TATEM ACCU" class="best-seller-img">
-                        <div class="card-body">
-                            <h2 class="card-text fw-bold fs-6">RENPUIS CONSUAT</h2>
-                            <h2 class=" fw-normal fs-6">Frarrari Air Purifire </h2>
-                            <h2 class="card-text fw-bold fs-6 m-0">$60.00</h2>
+                <div class="col-4">
+                    <div class="cart-summary">
+                        <div class="summary-row d-flex justify-content-between align-items-center mt-4">
+                            <span class="fs-20 ffp-SemiBold">SUBTOTAL</span>
+                            <span class="red ffp-Bold fs-20">$55.00</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/img/best-seller-img-3.png" alt="VOLUP TATEM ACCU" class="best-seller-img">
-                        <div class="card-body">
-                            <h2 class="card-text fw-bold fs-6">TURKEY SPARE DRUMSTICK</h2>
-                            <h2 class=" fw-normal fs-6">Discbrack </h2>
-                            <h2 class=" card-text fw-bold fs-6 m-0">$60.00</h2>
+                        <div class="summary-row d-flex justify-content-between align-items-center mt-2 mb-5">
+                            <span class="fs-20 ffp-Medium">TOTAL SAVING</span>
+                            <span class="fs-20">$40.00</span>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="card">
-                        <img src="/img/best-seller-img-4.png" alt="VOLUP TATEM ACCU" class="best-seller-img">
-                        <div class="card-body">
-                            <h2 class="card-text fw-bold fs-6">VOLUP MACWHEEL</h2>
-                            <h2 class=" fw-normal fs-6">Tyre Stylish Macwheel</h2>
-                            <h2 class="card-text fw-bold fs-6 m-0">$60.00</h2>
+                        <div class="summary-row total d-flex justify-content-between align-items-center mt-2 pt-2">
+                            <span class="fs-20 ffp-SemiBold">TOTAL</span>
+                            <span class="red ffp-Bold fs-20">$55.00</span>
                         </div>
+                        <button class="fs-20 ffp-Bold CHECKOUT-btn white-100 mt-5 mb-3">PROCEED TO CHECKOUT</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- best seller section end -->
-    <!-- footer section start -->
+    <!-- cart step end -->
+
+<!-- footer section start -->
     <div class="container-fluid bg-greay  position-relative mt-100">
         <div class="container">
             <div class="row email-box justify-content-center ">
@@ -539,6 +438,7 @@
             </div>
         </div>
     </div>
+
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/car.js"></script>

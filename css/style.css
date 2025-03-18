@@ -72,6 +72,7 @@ body{
 .fs-23{font-size: 23px;}
 .fs-25{font-size: 25px;}
 .fs-28{font-size: 28px;}
+.fs-30{font-size: 30px;}
 .fs-31{font-size: 31px;}
 .fs-34{font-size: 34px;}
 .fs-35{font-size: 35px;}
@@ -280,7 +281,9 @@ font-family: "Poppins-light" !important;
     font-weight: bold !important;
     color: #000 !important;
     padding: 12px 15px !important;
+    transition: 0.5s;
 }
+.nav-link:hover {color: var(--red) !important;}
 .navbar-nav {
     width: 100%;
     display: flex;
@@ -410,6 +413,7 @@ font-family: "Poppins-light" !important;
 }
 .deal-day-right{padding: 44px 44px;}
 .deal-day-left{padding: 8px 0px 0px 8px;}
+
 .box {
     width: 83px;
     height: 83px;
@@ -1020,4 +1024,91 @@ color: var(--red);}
 .specification table td:first-child {
     font-weight: bold;
     width: 30%; /* Adjust as needed */
+}
+.item-quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.quantity-input {
+    width: 40px;
+    text-align: center;
+    border: none;
+    margin-left: 7px;
+}
+.quantity-btn{
+    line-height: 38px;
+    padding: 0px 10px;
+    border: 1px solid #ddd;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 30px;
+}
+.cart-summary{
+    padding: 20px;
+    border: 1px solid var(--greay);
+    border-radius: 20px;
+}
+.cart-summary .total{
+    border-top: 1px solid var(--black);
+}
+.CHECKOUT-btn{
+    width: 100%;
+    padding: 10px 0px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    background:var(--red);
+}
+.empty-cart{
+    background:transparent;
+}
+
+.steps-cart h2{
+    font-size: 16px;
+    margin-top: 10px;
+}
+.steps-cart {
+    display: flex;
+    justify-content: space-evenly;
+    /* Ensures even spacing between steps */
+    gap: 20px;
+    /* Adds spacing between the icons */
+    padding: 25px;
+}
+
+.cart-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    /* Adjust width for consistent size */
+    font-size: 20px;
+    /* Adjust height for consistent size */
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+
+
+/* responsive */
+@media screen and (min-width: 1025px) and (max-width: 1440px){
+    /* .Arrivals-effect{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        justify-content: center;
+    } */
+
+}
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .brand-table .table, th, td {
+        padding: 20px 20px;
+    }
+    .deal-of-day-right img{
+        text-align: end;
+    }
+    .deal-day-right{padding: 44px 20px 44px 0px;}
 }
