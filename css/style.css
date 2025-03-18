@@ -1105,10 +1105,20 @@ color: var(--red);}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
     .brand-table .table, th, td {
-        padding: 20px 20px;
+        padding: 32px 32px;
     }
     .deal-of-day-right img{
         text-align: end;
+        width: 50% !important;
     }
+    .content{
+        width: 70% !important;
+      }
     .deal-day-right{padding: 44px 20px 44px 0px;}
+    .py-100{
+        padding: 50px 0px;
+    }
+    .category-dropdown {
+     position: absolute;
+    }
 }
